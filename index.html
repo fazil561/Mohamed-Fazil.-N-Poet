@@ -198,6 +198,122 @@ section {
   to {opacity: 1; transform: translateY(0);}
 }
 
+/* RESPONSIVE - Tablet and smaller */
+@media (max-width: 768px) {
+  nav {
+    gap: 20px;
+    padding: 12px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 80px;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
+
+  .hero-text {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .profile-frame img {
+    width: 200px;
+    height: 200px;
+  }
+
+  section {
+    padding: 60px 5%;
+  }
+
+  .books {
+    gap: 20px;
+  }
+
+  .book-card img {
+    width: 150px;
+    height: 220px;
+  }
+
+  .contact .social-links {
+    gap: 20px;
+  }
+
+  .contact .social-link {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive - Mobile phones */
+@media (max-width: 480px) {
+  nav {
+    gap: 15px;
+    padding: 10px 5px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .profile-frame img {
+    width: 160px;
+    height: 160px;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+
+  .book-card {
+    padding: 15px;
+  }
+
+  .book-card img {
+    width: 120px;
+    height: 180px;
+  }
+
+  .book-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .book-card p {
+    font-size: 0.85rem;
+  }
+
+  .book-card a {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
