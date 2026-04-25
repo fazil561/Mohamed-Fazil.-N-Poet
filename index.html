@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Fazil. N | Poet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f6f3ef;
+  color: #2e2e2e;
+  scroll-behavior: smooth;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: pageFadeIn 1s ease-out 0.2s forwards;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(to bottom, #f6f3ef, #eae4dc);
+  animation: fadeIn 2s ease;
+}
+
+.profile-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-frame img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  background: #2e2e2e;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 10%;
+}
+
+/* BOOKS */
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+}
+
+.book-card img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.book-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  background: #2e2e2e;
+  padding: 8px 15px;
+  border-radius: 15px;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact .social-link {
+  font-size: 2rem;
+  color: #2e2e2e;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.contact .social-link:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes pageFadeIn {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .hero-text {
+    text-align: center;
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#books">Books</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="profile-frame">
+    <img src="profile.jpg" alt="Profile Picture">
+  </div>
+  <div class="hero-text">
+    <h1>Mohamed Fazil. N</h1>
+    <p style="margin-bottom: 20px;">Poet of "Weight of Soft Things" and "Echoes that Wouldn't Fade"</p>
+    <p>Fazil is a poet of soft storms and lingering echoes. His words move through love, loss, and the delicate spaces in between—where feelings are not spoken, but felt. Each piece he writes is an attempt to hold onto something fleeting, to give shape to emotions that refuse to fade. His books are not just read—they are experienced, slowly, like a memory returning.</p>
+    <button onclick="scrollToSection('books')">Explore My Work</button>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books">
+  <h2 style="text-align:center; margin-bottom:40px;">Books & New Arrivals</h2>
+
+  <div class="books">
+
+    <div class="book-card fade-up">
+      <img src="https://simg.pothi.com/dDd0wwoIiwP9Ldw3_Wvj-yhpyx0-4L23-TqWnOThVUU/rs:fit/w:371/h:477/el:1/g:sm/cb:rev-3/bG9jYWw6Ly8vaW1h/Z2VzL3Byb2R1Y3Rz/LzIwMjYvMDQvU0tV/Mzk2NjgvSW1hZ2Vf/MC5qcGc.jpg" alt="Echoes">
+      <h3>Echoes that wouldn't fade</h3>
+      <p>A collection of lingering memories, unfinished love, and quiet ache.</p>
+      <a href="https://store.pothi.com/book/mohamed-fazil-n-echoes-wouldnt-fade/" target="_blank">Buy Now</a>
+    </div>
+
+    <div class="book-card fade-up">
+      <img src="https://m.media-amazon.com/images/I/5150i2iYS8L._SY445_SX342_FMwebp_.jpg" alt="Weight">
+      <h3>The weight of soft things</h3>
+      <p>Where gentleness carries gravity, and love feels heavier than silence.</p>
+      <a href="https://www.amazon.in/Weight-Soft-Things-Fragments-Restless/dp/1807152065/ref=sr_1_1?sr=8-1" target="_blank">Buy Now</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p>Let your words reach me.</p>
+  <div class="social-links">
+    <a href="https://instagram.com/writtenby.fazil" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=faziln1924@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/917349428468" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</section>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+}
+
+const faders = document.querySelectorAll('.fade-up');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect().top;
+    if (rect < window.innerHeight - 50) {
+      el.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
